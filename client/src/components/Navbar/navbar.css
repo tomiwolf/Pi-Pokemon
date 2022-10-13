@@ -1,0 +1,82 @@
+.menu {
+  /* background-color: #3595f6; */
+  /* padding: 1rem 2rem; */
+  background-image: url("../../assets/images/fondo-nav.jpg");
+  border-bottom: 1px solid #c4ccde;
+  width: 100%;
+  float: left;
+  height: 62px;
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center;
+  background-repeat: round;
+}
+
+.menu-span {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: inherit;
+  justify-content: space-between;
+  color: black;
+  padding: 10px;
+}
+
+.menu-dist-item {
+  display: grid;
+  align-content: center;
+}
+
+.menu ul li {
+  float: right;
+  list-style-type: none;
+  text-align: left;
+}
+
+.menu ul li a {
+  padding: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.modal-contenido {
+  background-color: aqua;
+  width: 300px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+  z-index: 10000;
+}
+
+.menu-img {
+  width: auto;
+  height: 50px;
+  max-width: 12%;
+  transform: rotate(-15deg);
+  transition: 0.3s;
+}
+/* .imagen:hover {-webkit-transform: rotate(360deg);transform: rotate(360deg);} */
+
+.menu-img:hover {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transform: rotate(15deg);
+  transition: 0.3s;
+
+  -webkit-transform: rotateZ (-15deg);
+  -ms-transform: rotateZ (-15deg);
+  transform: rotateZ (-15deg);
+}
+
+.social-media{
+  padding: 0 15px
+}
+
+.social-media-img{
+  width: 35px
+  
+}
