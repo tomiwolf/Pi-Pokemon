@@ -1,20 +1,18 @@
-import { Route, Switch } from 'react-router';
 import './App.css';
-import Form from './components/Form/Form';
-import Home from './components/Home/Home';
-import CardDetail from './components/CardDetail/CardDetail';
-import LandingPage from './components/LandingPage/LandingPage';
+import { Route, Routes } from 'react-router';
+import { Landing } from './components/landing.jsx';
+import { Home } from './components/home.jsx';
+import { Detail } from './components/detail.jsx';
+import { Form } from './components/form';
 
 function App() {
   return (
-    <div className="App">
-    <Switch>
-      <Route exact path='/' component={LandingPage} />
-      <Route exact path='/home' component={Home} />
-      <Route path='/form' component={Form} />
-      <Route path='/detail/:id/:flagId' component={CardDetail} />
-    </Switch>
-    </div>
+    <Routes>
+      <Route to exact path='/' element={<Landing/>}/>
+      <Route to path='/home' element={<Home/>}/>
+      <Route to path='/detail/:id' element={<Detail/>}/>
+      <Route to path='/create' element={<Form/>}/>
+    </Routes>
   );
 }
 

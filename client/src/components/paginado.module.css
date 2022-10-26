@@ -1,0 +1,29 @@
+.lista{
+    padding: 0;
+    margin-top: 40px;
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+}
+.btn{
+    margin: 10px;
+    padding: 10px 30px 10px 30px;
+    border: 2px solid #17D7A0;
+    background-color: white;
+    color: #17D7A0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    border-radius: 30px;
+}
+.btn:focus{
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px #17D7A0;
+    font-size: 20px;
+}
+.btn:hover{
+    cursor: pointer;     
+}
+

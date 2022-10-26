@@ -1,53 +1,41 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, UUIDV4 } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('Pokemon', {
-    id: {
+  sequelize.define('pokemon', {
+    id:{
       type: DataTypes.UUID,
+      defaultValue:DataTypes.UUIDV4,
       primaryKey: true,
-      // autoIncrement: true,
+      allowNull: false 
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
     },
-    life: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    vida:{
+      type:DataTypes.STRING
     },
-    attack: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    fuerza:{
+      type:DataTypes.STRING
     },
-    defense: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    defensa:{
+      type:DataTypes.STRING
     },
-    speed: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    velocidad:{
+      type:DataTypes.STRING
     },
-    height: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    altura:{
+      type:DataTypes.STRING
     },
-    weight: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
+    peso:{
+      type:DataTypes.STRING
     },
-    image: {
-      type: DataTypes.STRING,
-      // validate: {isUrl: true},
-      defaultValue: "https://imagenpng.com/wp-content/uploads/2016/09/Pokebola-pokeball-png-0.png"
-    },
-    flagId: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true
-    },
+    img:{
+      type:DataTypes.STRING,
+      defaultValue:'https://cdn-icons-png.flaticon.com/512/634/634741.png'
+    }
   });
 };
 
